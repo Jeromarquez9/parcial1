@@ -58,7 +58,6 @@ class ProductoTecnologico extends Producto {
         this.garantiaMeses = garantiaMeses;
     }
 
-    @Override
     public String mostrarDatos() {
         return "Tecnológico: " + getDescripcion() + 
                " – Garantía: " + garantiaMeses + " meses – Precio: $" + getPrecio();
@@ -81,7 +80,6 @@ class ProductoOficina extends Producto {
         this.proveedor = proveedor;
     }
 
-    @Override
     public String mostrarDatos() {
         return "Oficina: " + getDescripcion() + 
                " – Proveedor: " + proveedor + " – Precio: $" + getPrecio();
@@ -103,7 +101,8 @@ class Tienda {
     }
 
     public void mostrarInventario() {
-        System.out.println("Inventario de la tienda " + nombre + ":");
+        System.out.println("Inventario" + nombre + ":");
         for (Producto p : inventario) {
             System.out.println(" - " + p.mostrarDatos());
         }
+
